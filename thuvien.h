@@ -10,32 +10,33 @@ struct Sach {
 	string nhaXuatBan;
 	int namPhatHanh;
 	int soLuong;
-	int conlai;
 	int Priority;
 	bool tonTai;
-
-	Sach()
-	{
-		maSach = " ";
-		nhaXuatBan = " ";
-		tieuDe = " ";
-		tacGia = " ";
-		conlai = 0;
-		namPhatHanh = 0;
-		soLuong = 0;
-		Priority = 0;
-		tonTai = true;
-	}
-	Sach(string id, string nxb, string td, string tg, int cl, int year, int sl, int pr)
-	{
-		maSach = id;
-		nhaXuatBan = nxb;
-		tieuDe = td;
-		tacGia = tg;
-		conlai = cl;
-		namPhatHanh = year;
-		soLuong = sl;
-		Priority = pr;
-		tonTai = true;
-	}
 };
+void nhapSach(Sach &s) {
+
+    cout << "\n========== NHAP THONG TIN SACH ==========\n";
+
+    cout << "Nhap ma sach: ";
+    cin>> s.maSach;
+
+    cout << "\nNhap ten sach: ";
+    cin>> s.tieuDe;
+
+    cout << "\nNhap tac gia: ";
+    cin>> s.tacGia;
+
+    cout << "\nNhap nha xuat ban: ";
+    cin>> s.nhaXuatBan;
+
+    cout << "\Nhap nam xuat ban: ";
+    cin >> s.namPhatHanh;
+
+    cout << "\nNhap so luong: ";
+    cin >> s.soLuong;
+
+	cout<<"\nNhap Priority: ";
+	cin>>s.Priority;
+	s.tonTai=true;
+    cout << "\nThem thong tin sach thanh cong!\n";
+}
