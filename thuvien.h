@@ -7,6 +7,7 @@ struct Sach {
 	string maSach;
 	string tieuDe;
 	string tacGia;
+	string theLoai;
 	string nhaXuatBan;
 	int namPhatHanh;
 	int soLuong;
@@ -26,10 +27,13 @@ void nhapSach(Sach &s) {
     cout << "\nNhap tac gia: ";
     cin>> s.tacGia;
 
+	cout<<"\nNhap the loai: ";
+	cin>>s.theLoai;
+
     cout << "\nNhap nha xuat ban: ";
     cin>> s.nhaXuatBan;
 
-    cout << "\Nhap nam xuat ban: ";
+    cout << "\Nhap nam phat hanh: ";
     cin >> s.namPhatHanh;
 
     cout << "\nNhap so luong: ";
@@ -40,3 +44,12 @@ void nhapSach(Sach &s) {
 	s.tonTai=true;
     cout << "\nThem thong tin sach thanh cong!\n";
 }
+void hienThi( const Sach& s){
+	cout<< "\nMa Sach: "<<s.maSach;
+	cout<<"\nTen Sach: "<<s.tieuDe;
+	cout<<"\nTac Gia: "<<s.TacGia;
+	cout<<"\nNha Xuat Ban: "<<s.nhaXuatBan;
+	cout<<"\nNam Phat Hanh: "<<s.namPhatHanh;
+	cout<<"\nSo Luong: "<<s.soLuong;
+}
+	
