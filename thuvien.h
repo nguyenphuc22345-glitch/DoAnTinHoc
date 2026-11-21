@@ -33,7 +33,7 @@ void nhapSach(Sach &s) {
     cout << "\nNhap nha xuat ban: ";
     cin>> s.nhaXuatBan;
 
-    cout << "\Nhap nam phat hanh: ";
+    cout << "\nNhap nam phat hanh: ";
     cin >> s.namPhatHanh;
 
     cout << "\nNhap so luong: ";
