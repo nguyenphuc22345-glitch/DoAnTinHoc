@@ -30,7 +30,7 @@ int timHash(hashNode* bangBam[], Sach ds[], string maSach)
     while (p != NULL)
     {
         int i = p->stt;
-        if (ds[i].maSach == maSach)
+        if (if (ds[i].tonTai && ds[i].maSach == maSach))
             return i;
         p = p->next;
     }
