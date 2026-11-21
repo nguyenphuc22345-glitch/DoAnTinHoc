@@ -71,12 +71,7 @@ void duyetSkewHeap(SkewNode* root,Sach ds[]
 		return;
 
 	int i = root->stt;
-
-	cout << "\nMa sach: " << ds[i].maSach;
-	cout << "\nTen sach: " << ds[i].tieuDe;
-	cout << "\nPriority: " << ds[i].Priority;
-	cout << "\n------------------------";
-
+	if (ds[i].tonTai) hienThi(ds[i]);
 	duyetSkewHeap(root->left, ds);
 	duyetSkewHeap(root->right, ds);
 }
