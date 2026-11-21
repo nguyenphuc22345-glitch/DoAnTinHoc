@@ -162,9 +162,9 @@ AVLNode* xoaSach(AVLNode* node, Sach ds[], int index)
         node->left = leftRotate(node->left);
         return rightRotate(node);
     }
-    if (balance < 1 && heSoCanBang(node->right) <= 0)
+    if (balance < -1 && heSoCanBang(node->right) <= 0)
         return leftRotate(node);
-    if (balance < 1 && heSoCanBang(node->right) > 0)
+    if (balance < -1 && heSoCanBang(node->right) > 0)
     {
         node->right = rightRotate(node->right);
         return leftRotate(node);
@@ -187,12 +187,12 @@ int timTheoTen(AVLNode* node, Sach ds[], string ten)
 }
 void duyetLNR(AVLNode* node, Sach ds[])
 {
-    if (node != NULL)
-    {
-        duyetLNR(node->left, ds);
-        cout << ds[node->stt].tieuDe << endl;
-        duyetLNR(node->right, ds);
-    }
+    if (node == NULL) 
+        return;
+    duyetLNR(node->left, ds);
+    if (ds[node->stt].tonTai) 
+        hienThi(ds[node->stt]);
+    duyetLNR(node->right, ds);
 }
 void clear(AVLNode* node)
 {
